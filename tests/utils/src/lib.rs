@@ -1,6 +1,6 @@
 use tantivy_tokenizer_api::BoxTokenStream;
 
-pub fn reduce_token_stream_to_string(token_stream: &mut BoxTokenStream) -> String {
+pub fn reduce_token_stream_to_string<'a>(token_stream: &mut BoxTokenStream<'a>) -> String {
     let mut tokens: Vec<String> = Vec::new();
 
     loop {
